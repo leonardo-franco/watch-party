@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rave Clone – Netflix Party</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside id="sidebar">
+    <h1>Rave Clone</h1>
+    <div>
+      <button id="create-btn">Criar Sessão</button>
+      <input id="session-input" placeholder="Código da Sessão">
+      <button id="join-btn">Entrar</button>
+    </div>
+    <div id="invite" hidden>
+      Convide: <a id="invite-link" href="#"></a>
+    </div>
+    <div id="chat">
+      <div id="messages"></div>
+      <input id="chat-input" placeholder="Mensagem">
+      <button id="send-btn">Enviar</button>
+    </div>
+  </aside>
+
+  <main>
+    <p>Abra <a href="https://netflix.com" target="_blank">netflix.com</a> em outra aba.</p>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
