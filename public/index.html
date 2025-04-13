@@ -9,23 +9,35 @@
 <body>
   <aside id="sidebar">
     <h1>Rave Clone</h1>
-    <div>
+    <div class="controls">
       <button id="create-btn">Criar Sessão</button>
       <input id="session-input" placeholder="Código da Sessão">
       <button id="join-btn">Entrar</button>
     </div>
-    <div id="invite" hidden>
+    <div id="invite" class="invite" hidden>
       Convide: <a id="invite-link" href="#"></a>
+    </div>
+    <div id="video-link-container">
+      <input type="text" id="netflix-link-input"
+             placeholder="Cole o link da Netflix (ex: https://www.netflix.com/watch/12345678)">
+      <button id="load-video-btn">Carregar Vídeo</button>
     </div>
     <div id="chat">
       <div id="messages"></div>
-      <input id="chat-input" placeholder="Mensagem">
-      <button id="send-btn">Enviar</button>
+      <div class="chat-input">
+        <input id="chat-input" placeholder="Mensagem">
+        <button id="send-btn">Enviar</button>
+      </div>
     </div>
   </aside>
 
-  <main>
-    <p>Abra <a href="https://netflix.com" target="_blank">netflix.com</a> em outra aba.</p>
+  <main id="main">
+    <div id="video-container">
+      <iframe id="netflix-player"
+              src=""
+              allow="autoplay; fullscreen"
+              frameborder="0"></iframe>
+    </div>
   </main>
 
   <script src="/socket.io/socket.io.js"></script>

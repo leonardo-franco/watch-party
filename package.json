@@ -1,7 +1,7 @@
 {
   "name": "rave-clone-netflix",
   "version": "1.0.0",
-  "description": "Clone do Rave App com suporte para Netflix e sessão de chat.",
+  "description": "Rave‑clone com embed Netflix via proxy e chat Socket.IO",
   "main": "server.js",
   "scripts": {
     "build": "webpack --mode production",
@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "express": "^4.18.2",
-    "socket.io": "^4.5.4"
+    "socket.io": "^4.5.4",
+    "http-proxy-middleware": "^2.0.6"
   }
 }
